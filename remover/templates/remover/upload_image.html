@@ -1,0 +1,23 @@
+{% extends 'remover/base.html' %}
+{% load static %}
+{% block content %}
+<script src="{% static 'drag.js' %}"></script>
+
+    <div class="container mt-5">
+        <div class="centered-element">
+        <h1 class="mb-4">Background Remover</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <div class="drag-image">
+    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+
+                <input type="file" name="image" class="form-control-file">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Remove Background</button>
+        </form>
+    </div>
+    </div>
+
+{% endblock %}

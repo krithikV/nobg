@@ -1,0 +1,9 @@
+{% extends 'remover/base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="mb-4">Background Removed Image</h1>
+       <!-- <img style="height: auto; width: 20%;" src="data:image/jpeg;base64,{{ img_org_url }}" alt="Orginal Image" class="img-fluid">-->
+        <img style="height: auto; width: 20%;" src="data:image/png;base64,{{ image_url }}" alt="Result Image" class="img-fluid">
+    </div>
+{% endblock %}
